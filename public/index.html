@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITULO}}</title>
+<link rel="icon" href="{{FAVICON}}" sizes="any">
+<link rel="apple-touch-icon" href="{{APPLE_ICON}}">
+<meta name="theme-color" content="{{COR_TEMA}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{FONTES}}" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/auth.css">
+<link rel="stylesheet" href="/brand.css">
+<script src="/brand.js"></script>
+<script>
+  // aplica o tema antes de desenhar, para nao piscar
+  try { var t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.tema = t; } catch (e) {}
+</script>
+</head>
+<body>
+<div id="auth-root"></div>
+<div class="app" hidden>
+  <aside class="side" aria-label="Menu principal">
+    <div class="brand"><span class="brand-name">{{NOME}}</span></div>
+    <nav id="nav"></nav>
+    <div class="side-foot">
+      <span class="modo" id="modo"></span>
+      <button class="icon-btn" id="tema" aria-label="Alternar tema claro e escuro"></button>
+      <button class="icon-btn" id="sair" aria-label="Sair do CRM" title="Sair"></button>
+    </div>
+  </aside>
+  <main id="app" tabindex="-1"></main>
+</div>
+
+<div class="drawer-wrap" id="drawer" hidden>
+  <div class="drawer-bg" data-close></div>
+  <section class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <header><h2 id="drawer-title"></h2><button class="icon-btn" data-close aria-label="Fechar"></button></header>
+    <div class="drawer-body" id="drawer-body"></div>
+  </section>
+</div>
+
+<dialog id="confirmar"></dialog>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<script src="/vendor/supabase.js"></script>
+<script src="/auth.js"></script>
+<script src="/vendor/qrcode.js"></script>
+<script src="/editor.js"></script>
+<script src="/fluxos.js"></script>
+<script src="/analises.js"></script>
+<script src="/produtos.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

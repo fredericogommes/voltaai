@@ -1,0 +1,9 @@
+# Dados de clientes e segredos: nunca no Git
+.env
+*.db
+*.db-shm
+*.db-wal
+*.log
+public/media/
+node_modules/
+dist-pages/

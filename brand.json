@@ -1,0 +1,89 @@
+{
+  "_leia": "Marca do whitelabel. Para outro cliente, copie este arquivo (ex.: marcas/cliente.json) e aponte BRAND_FILE para ele no .env. 'produto' é a marca do CRM; 'loja' é o negócio que usa o CRM e assina as mensagens aos clientes.",
+
+  "produto": {
+    "nome": "Voltaai",
+    "nomeMarca": ["volta", "ai"],
+    "sufixo": "CRM",
+    "tagline": "CRM para Foodservice",
+    "slug": "voltaai",
+    "icone": "/marca/icone-192.png",
+    "logoClaro": "/marca/logo-horizontal-claro.png",
+    "logoEscuro": "/marca/logo-horizontal-escuro.png",
+    "favicon": "/favicon.ico",
+    "appleTouchIcon": "/marca/apple-touch-icon.png"
+  },
+
+  "loja": {
+    "nome": "sua loja",
+    "segmento": "foodservice",
+    "cidade": "",
+    "slogan": "",
+    "site": "",
+    "dominioEmail": "",
+    "emailRemetente": "",
+    "assinatura": "Equipe",
+    "produtoExemplo": "seu prato favorito",
+    "descricaoParaIA": "um negócio de foodservice com delivery"
+  },
+
+  "pdv": {
+    "nome": "PDV",
+    "schema": "voltaai_pdv"
+  },
+
+  "auth": {
+    "_leia": "Projeto Supabase 'voltaai' (sa-east-1). A chave abaixo é a publicável (pública); as RLS protegem os dados.",
+    "supabaseUrl": "https://hwcpphocovmabkqzntdk.supabase.co",
+    "supabaseKey": "sb_publishable_aYhEazzbCnwyKCKe45kLBw_0GCpHicu"
+  },
+
+  "fontes": {
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap",
+    "display": "'Nunito', 'Segoe UI', system-ui, sans-serif",
+    "texto": "'Inter', 'Segoe UI', system-ui, sans-serif"
+  },
+
+  "cores": {
+    "claro": {
+      "tinta": "#172554",
+      "lateral": "#172554",
+      "papel": "#f7f6fc",
+      "painel": "#ffffff",
+      "painel-2": "#efedfb",
+      "linha": "#e1def3",
+      "texto": "#172554",
+      "texto-2": "#5d6386",
+      "crosta": "#7657f4",
+      "crosta-fundo": "#7657f4",
+      "crosta-texto": "#ffffff",
+      "pimenta": "#e5484d",
+      "folha": "#14a39b",
+      "ambar": "#f07a45",
+      "azul": "#5b6fd8",
+      "foco": "#7657f4",
+      "destaque-2": "#20c6bd",
+      "destaque-3": "#ff9a70",
+      "lateral-texto": "#c9cdf0",
+      "lateral-ativo-texto": "#ffffff",
+      "sombra": "0 1px 2px rgb(23 37 84 / .06), 0 8px 24px -12px rgb(23 37 84 / .22)"
+    },
+    "escuro": {
+      "lateral": "#0c1435",
+      "papel": "#111a3f",
+      "painel": "#18234f",
+      "painel-2": "#202c5e",
+      "linha": "#2e3a72",
+      "texto": "#eef0ff",
+      "texto-2": "#a9b0d8",
+      "crosta": "#8c74ff",
+      "crosta-fundo": "#7657f4",
+      "folha": "#20c6bd",
+      "ambar": "#ff9a70",
+      "azul": "#8fa0ff",
+      "pimenta": "#ff6b6f",
+      "foco": "#20c6bd",
+      "sombra": "none"
+    }
+  }
+}

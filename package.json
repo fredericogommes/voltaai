@@ -1,0 +1,14 @@
+{
+  "name": "voltaai-crm",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Voltaai: CRM para Foodservice (whitelabel; marca em brand.json)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node scripts/run-tests.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
