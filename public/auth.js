@@ -17,7 +17,7 @@
 
   function message(error) {
     const text = String(error?.message || error || 'Não foi possível entrar.');
-    if (/invalid login credentials/i.test(text)) return 'E-mail ou senha incorretos.';
+    if (/invalid login credentials/i.test(text)) return 'E-mail ou senha incorretos. Se você criou a conta pelo Google, use o botão Entrar com Google.';
     if (/email not confirmed/i.test(text)) return 'Confirme seu e-mail antes de entrar. O link chegou na sua caixa de entrada.';
     if (/already registered|already been registered/i.test(text)) return 'Este e-mail já tem conta. Use a aba Entrar.';
     if (/password should be at least/i.test(text)) return 'A senha precisa ter pelo menos 6 caracteres.';
@@ -82,6 +82,10 @@
         const { data, error: e } = await sb.auth.signUp({ email, password, options: { emailRedirectTo: voltar(), data: { full_name: $('auth-nome').value.trim() } } });
         button.disabled = false; button.textContent = 'Criar conta';
         if (e) { erro.textContent = message(e); return; }
+        // e-mail já cadastrado (ex.: pelo Google): o Supabase responde "ok" sem criar nada e sem identidades
+        if (data.user && Array.isArray(data.user.identities) && !data.user.identities.length) {
+          aba = 'entrar'; showLogin('Este e-mail já tem conta. Se você entrou antes pelo Google, use o botão Entrar com Google.'); return;
+        }
         if (!data.session) { aba = 'entrar'; showLogin('', `Conta criada! Enviamos um link de confirmação para ${email}. Confirme e depois entre.`); }
         return;   // com sessão, onAuthStateChange abre o app
       }
