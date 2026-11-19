@@ -21,3 +21,4 @@
 .auth-ok:empty { display: none; }
 .auth-conta { display: grid; gap: 10px; padding: 16px; border-radius: 14px; background: var(--painel-2); text-align: left; }
 .auth-conta p { margin: 0; }
+.auth-card a.btn { display: flex; justify-content: center; text-decoration: none; }

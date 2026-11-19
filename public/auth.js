@@ -107,6 +107,7 @@
           <p><b>${esc(u.email || '')}</b><br><span class="auth-dica">Conta criada com ${via}.</span></p>
           <p>${esc(motivo)}</p>
         </div>
+        ${ESTATICO && B.produto.appUrl ? `<a class="btn primario" id="auth-abrir" href="${esc(B.produto.appUrl)}">Abrir o sistema</a>` : ''}
         <button class="btn" id="auth-sair">Sair</button>
       </section></main>`;
     $('auth-sair').onclick = logout;
@@ -114,7 +115,7 @@
 
   function showApp(session) {
     if (!session) return showLogin();
-    if (ESTATICO) return showConta(session, 'Login funcionando. Esta é a versão de teste: o painel com os dados da loja roda no servidor do CRM.');
+    if (ESTATICO) return showConta(session, B.produto.appUrl ? 'Login funcionando. O painel com os dados da loja abre no servidor do CRM: clique em Abrir o sistema e entre de novo com o Google.' : 'Login funcionando. O painel com os dados da loja roda no servidor do CRM.');
     root.innerHTML = ''; app.hidden = false;
     if (!started) { started = true; resolveReady(session); }
   }

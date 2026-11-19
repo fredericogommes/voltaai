@@ -11,7 +11,9 @@
     "logoClaro": "/marca/logo-horizontal-claro.png",
     "logoEscuro": "/marca/logo-horizontal-escuro.png",
     "favicon": "/favicon.ico",
-    "appleTouchIcon": "/marca/apple-touch-icon.png"
+    "appleTouchIcon": "/marca/apple-touch-icon.png",
+    "_appUrl": "Endereço do servidor do CRM (painel completo). A página estática do GitHub Pages leva para cá depois do login.",
+    "appUrl": "http://localhost:3000/"
   },
 
   "loja": {
